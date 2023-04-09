@@ -9,7 +9,6 @@
 body{
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 6fr;
     position: relative;
 }
 ul{
@@ -70,6 +69,8 @@ button svg{
 .headerContainer{
    grid-column: 2/3; 
    align-self: center;
+   padding-top: 5rem;
+   padding-bottom: 5rem;
 }
 .firstHeader{
     display: flex;
@@ -82,7 +83,7 @@ button svg{
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 div.search{
     display: flex;
@@ -111,7 +112,7 @@ li.user{
     display: flex;
     gap: 1.5rem;
     font-family: mycoolfont, sans-serif;
-    font-size: 0.7rem;
+    font-size: 1rem;
     flex: 1;
     justify-content: center;
     
@@ -134,7 +135,7 @@ li.user{
     border-radius: 0.5rem;
     height: 1.7rem;
     width: 90px;
-    font-size: 0.7rem;
+    font-size: 1rem;
     
 
 }
@@ -168,6 +169,7 @@ li.user{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 
 }
 .mainContainer{
@@ -196,15 +198,15 @@ li.user{
     border-left: 4px solid #0891b2;
     border-radius: 0.7rem;
     justify-content: center;
-    box-shadow: 2px 2px 5px #000000;
+    box-shadow: 1px 1px 2px #0000002c;
 }
 
 div.image img{
     height: 6.5rem;
     width: 230px;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     border-radius: 0.7rem;
-    box-shadow: 2px 2px 5px #000000;
+    box-shadow: 1px 1px 2px #0000002c;
 }
 .btns{
     align-self: flex-end;
@@ -243,8 +245,8 @@ li p{
     border-radius: 0.7rem;
     margin-right: 1rem;
     padding: 0rem 1rem;
-    border: 1px solid black;
-    box-shadow: 1px 1px 4px black;
+    /*border: 1px solid black;*/
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.205);
 }
 #Css-Exercises *{
     margin: 0px;
@@ -277,5 +279,74 @@ li p{
 .css-exercisesCard ul li a:hover, #JS-Exercises ul li a:hover{
     color: blue;
 }
+ @media screen and (orientation: portrait)and (min-height:800px){
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        z-index: 3;
+    }
+        .projectsWrapper{
+            display: flex;
+            flex-direction: column;
+        }
+        .projectsWrapper li{
+          /*  height: 24rem;*/
+        }
+        div.image img{
+            height: 20rem;
+            width: 40rem;
+            border: 1px solid #000000;
+            border-radius: 0.7rem;
+            box-shadow: 1px 1px 2px #0000002c;
+        }
+        .btns svg{
+            width: 4rem;
+            height: 4rem;
+        }
+        .projectsContainer h1{
+            padding-left: 3rem;
+            font-family: mycoolfont;
+            color: #164e63;
+            font-size: 2rem;
+        }
+        li h3{
+            font-size: 2rem;
+        }
 
+        li p{
+            font-size: 2rem;
+        }
+    .sidebarContainer{
+        /*width: 13rem;*/
+        overflow: hidden;
+        padding-top: 10rem;
+    }
+  /*  .SidebarItems li{
+    
+        display:flex;
+        flex-direction: row-reverse;
+    }
+    .Sb-label{
+        color: transparent;
+    }*/
+    .SidebarItems li{
+        margin-left: 4rem;
+        height: 8rem;
 
+    }
+    .Sb-icon svg{
+        width: 5rem;
+        height: 5rem;
+        margin-right: 2rem;
+    }
+    .SH-icon svg {
+        height: 6rem;
+        width: 6rem;
+    }
+    .css-exercisesCard  ul li a, #JS-Exercises ul li a {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+ }
